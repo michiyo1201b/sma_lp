@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スピリチュアル・メタサイエンス・アカデミー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Noto Sans JP', sans-serif;
+            --color-text: #3a3a3a;
+            --color-background: #ffffff;
+            --color-primary: #a89e8d; /* A sophisticated gold/bronze tone */
+            --color-dark: #1a1a1a;
+        }
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        header {
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+            padding: 20px 0;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-sans);
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+        }
+        nav a {
+            font-family: var(--font-sans);
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            font-size: 0.9em;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            transition: opacity 0.3s ease;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('hero-image.jpg.png');
+            background-size: cover;
+            background-position: center bottom;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            overflow: hidden; /* Keep for general safety */
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: light-grow 5s ease-out forwards;
+        }
+        @keyframes light-grow {
+            to {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: light-grow 5s ease-out forwards;
+        }
+        @keyframes light-grow {
+            to {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5em;
+            font-weight: 300;
+            margin: 0 0 20px;
+            letter-spacing: 0.02em;
+        }
+        .hero p {
+            font-size: 1.2em;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 100px 0;
+        }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.8em;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--color-dark);
+        }
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text {
+            font-size: 1.1em;
+            line-height: 2;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .message-container {
+            display: block;
+            margin-top: 60px;
+        }
+        .message-text {
+            font-size: 1.1em;
+            line-height: 2;
+            margin-bottom: 60px; /* Add more space below text */
+        }
+        .message-image img {
+            max-width: 600px; /* Increase image max-width */
+            display: block;
+            margin: 0 auto; /* Center the image */
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .content-grid h3 {
+            font-family: var(--font-serif);
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--color-dark);
+        }
+        .content-grid p {
+            font-size: 1em;
+            line-height: 2;
+        }
+        #contact {
+            background-color: #f7f7f7;
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 400;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--color-dark);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9em;
+        }
+        @media (max-width: 800px) {
+            .about-container,
+            .message-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-text,
+            .message-text {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">一般社団法人スピリチュアル・メタサイエンス・アカデミー</a>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#news">News</a>
+                    <a href="#course">Course</a>
+                    <a href="#counsellors">Counsellors</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>意識の探求、そして自己の解放へ</h1>
+                <p>精神的超過額（スピリチュアル・メタサイエンス）でカウンセラーを養成するオンラインのアカデミー。7000人以上の実績、魂・心・精神のエネルギーを学ぶ1年半のプログラム。</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="news" class="section">
+                <h2 class="section-title">News</h2>
+                <div class="news-content" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                    <p><strong>2025年7月10日:</strong> 新しいカウンセリングプログラムが開始されました。詳細はこちらをご覧ください。</p>
+                    <p><strong>2025年6月20日:</strong> 夏期特別ワークショップの開催が決定しました。お申し込み受付中です。</p>
+                    <p><strong>2025年5月15日:</strong> アカデミーのウェブサイトがリニューアルされました。</p>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <h2 class="section-title">About the Academy</h2>
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="sma-image-2.png" alt="About the Academy">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            当アカデミーは、オンラインで学ぶスピリチュアルカウンセラーを目指す人たちのための学校。
+                            目に見えない世界の法則や人間の意識の構造を、現代科学（メタサイエンス）の知見を取り入れながら探求する学びの場です。「スピリチュアル」を感覚的なものだけで終わらせず、論理的かつ体系的に理解することで、誰もが再現可能な形で自己変革と成長を遂げることを目指します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="message-container">
+                    <div class="message-text">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">みちよからのメッセージ</h2>
+                        <p>
+                            スピリチュアルは、抽象的で定義ができない分野なので、ややもすると怪しまれることもあります。そもそも見えないものを扱う領域なので現在の科学では証明のしようがないものでもあります。ですが、エビデンスを出せないからといって、この世に全く存在しないと言い切れるのでしょうか。
+                        </p>
+                        <p>
+                            現代の科学では証明不可能でも、それでも“そこに存在するエネルギー”から問題の原因を見、改善していけるとしたらどうでしょうか。実際、心、精神、魂を「エネルギー」として感知し理解することで、人生の悩みは減り、病気も癒され消滅していく…という現実を累計７０００人以上のカウンセリングセッションで目の当たりにしてきました。
+                        </p>
+                        <p>
+                            見える世界の定義は“人間”が作ったものですが、それを超越した世界が「スピリチュアル・メタサイエンス」と考えます。そして真のスピリチュアルは魂を扱い、精神、心を救う分野にありますが宗教とは異なります。ましてや人を恐れさせたり、苦しめる世界とは真逆な領域にあるものです。
+                        </p>
+                        <p>
+                            スピリチュアル・メタサイエンス・アカデミーは、スピリチュアルの現象事象自体を深堀して科学的に証明する…ということは行いません。見えないものが科学で証明されるのを待っていたら、何十年も、何世紀も経ってしまうかもしれない。そうではなく、今目の前の人が抱えている様々な問題に《エネルギーのレベル》から対応でき、人間が生きやすくなるための＜精神的超科学（スピリチュアル・メタサイエンス）＞を理解し、扱えるカウンセラー／ヒーラーを育てる目的をもって設立されました。
+                        </p>
+                        <p>
+                            近代社会は物質的なもの、見えるものばかりに比重を置きすぎたがゆえに、精神や魂という人間の根幹が忘れ去られています。その弊害として、心の問題は重要視されず悩みは増える一方です。さらに心と精神が直接影響を与える身体の問題（病気）も増加、西洋医学では「人はなぜ病気になるのか」も議論されないまま、薬漬けの診療が行われている昨今です。
+                            これからは特に社会のデジタル化が進むことにより、人もそれに合わせ機械的になり、本来の人間らしさを失うことで心身の不調をきたすことや、仕事をITに取られることでのアイデンティティの喪失など、人のマインドが崩壊していくことは、容易に想像できることです。
+                        </p>
+                        <p>
+                            このような現状、未来像からわたしたちが今できることは、既存の科学やテクノロジーとは対極にあるスピリチュアルという目には見えないけども本質を扱う科学での解決方法を見出すことです。
+                        </p>
+                        <p>
+                            スピリチュアリティは、学問だけではなく実践や気づきの体験をもって活かせるものです。自分に愛を持ち、社会で自分らしく生きやすくなる人を増やすためのスピリチュアルを講義します。
+                        </p>
+                        <p>
+                            当「スピリチュアル・メタサイエンス・アカデミー」では、1年半のカリキュラムでカウンセラーを養成、
+                        </p>
+                        <p>
+                            《既存のスピリチュアルを超えたスピリチュアル》
+                        </p>
+                        <p>
+                            で、人々の心に向き合い、社会やコミュニティーで活躍する人材を育成・派遣します。
+                        </p>
+                        <p>&nbsp;</p>
+                        <p>
+                            学長　みちよ（スピリチュアルカウンセラー／ヒーラー、”魂のお医者さん”）
+                        </p>
+                        <p>
+                            <a href="https://angelswayhealing.com/about" target="_blank">https://angelswayhealing.com/about</a>
+                        </p>
+                    </div>
+                    <div class="message-image">
+                        <img src="sma-image-5.JPG" alt="みちよからのメッセージ">
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section id="courses" class="section">
+                <h2 class="section-title">Our Courses</h2>
+                <img src="sma-image-3.png" alt="Our Courses" style="display: block; margin: 0 auto 60px; max-width: 800px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div class="content-grid">
+                    <div>
+                        <h3>基礎コース</h3>
+                        <p>スピリチュアルな探求の第一歩。瞑想、エネルギーの基礎、意識の仕組みを学び、日常に活かすための土台を築きます。</p>
+                    </div>
+                    <div>
+                        <h3>アドバンスコース</h3>
+                        <p>量子力学的な視点から意識の多次元性を探求。より深く、専門的な知識と実践を通じて、自己のマスターを目指します。</p>
+                    </div>
+                    <div>
+                        <h3>特別ワークショップ</h3>
+                        <p>国内外の専門家を招き、特定のテーマに特化した集中講座を定期的に開催します。（詳細は近日公開予定）</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-info">
+                    <p>ご質問、ご相談、入学に関するお問い合わせはこちらから。</p>
+                    <p>Email: <a href="mailto:info@spiritual-metascience.example.com">info@spiritual-metascience.example.com</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Spiritual Metascience Academy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
