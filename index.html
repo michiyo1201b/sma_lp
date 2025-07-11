@@ -290,6 +290,7 @@
             }
             .hero p {
                 font-size: 1em;
+                padding: 0 20px;
             }
             .section {
                 padding: 60px 0;
@@ -298,8 +299,7 @@
                 font-size: 2.2em;
                 margin-bottom: 40px;
             }
-            .about-container,
-            .message-container {
+            .about-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
@@ -314,6 +314,10 @@
             .content-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+            .side-padding {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     </style>
@@ -411,7 +415,7 @@
                     <div class="message-image">
                         <img src="sma-image-5.jpg" alt="みちよからのメッセージ" class="image-hover-effect">
                         <div class="social-icons">
-                            <a href="https://www.youtube.com/@michiyospiritual" target="_blank" aria-label="YouTube"><img src="https://www.youtube.com/favicon.ico" alt="YouTube"></a>
+                            <a href="https://www.youtube.com/@michiyospiritual" target="_blank" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#ff0000"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
                             <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" aria-label="Ameblo"><img src="https://ameblo.jp/favicon.ico" alt="Ameblo"></a>
                             <a href="https://voicy.jp/channel/1756" target="_blank" aria-label="Voicy"><img src="https://voicy.jp/favicon.ico" alt="Voicy"></a>
                             <a href="https://www.amazon.co.jp/stores/author/B005L8V05K/allbooks?ingress=0&visitId=ccc2345f-2892-401a-bf35-0aa2b2a459af&ref_=ap_rdr" target="_blank" aria-label="Amazon"><img src="https://www.amazon.co.jp/favicon.ico" alt="Amazon"></a>
@@ -425,7 +429,7 @@
             <section id="courses" class="section">
                 <h2 class="section-title">Our Courses</h2>
                 <img src="sma-image-3.png" alt="Our Courses" class="image-hover-effect course-main-image">
-                <div class="content-grid">
+                <div class="content-grid side-padding">
                     <div>
                         <h3>エキスパートコース</h3>
                         <p>基礎共通科目（１年）　エネルギーの基礎、意識の仕組みを学び、カウンセラーとしての土台を作ります。<br>カウンセラーを目指す方、目指さない方も受けていただけます</p>
@@ -443,7 +447,7 @@
             <section id="counsellors" class="section">
                 <h2 class="section-title">Our Counsellors</h2>
                 <img src="sma-image-4.png" alt="Our Counsellors" class="image-hover-effect counsellor-main-image">
-                <div style="text-align: center; font-size: 1em; color: var(--color-dark);">
+                <div style="text-align: center; font-size: 1em; color: var(--color-dark);" class="side-padding">
                     <p>TBA　今後、登録カウンセラー情報をこちらで随時更新します</p>
                 </div>
             </section>
