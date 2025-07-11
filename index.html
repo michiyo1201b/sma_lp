@@ -265,6 +265,39 @@
             font-size: 0.9em;
         }
         @media (max-width: 800px) {
+            .container {
+                padding: 0 20px;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo {
+                margin-bottom: 15px;
+                font-size: 1em;
+                text-align: center;
+            }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                margin: 5px 10px;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .section-title {
+                font-size: 2.2em;
+                margin-bottom: 40px;
+            }
             .about-container,
             .message-container {
                 grid-template-columns: 1fr;
@@ -273,6 +306,14 @@
             .about-text,
             .message-text {
                 text-align: left;
+                font-size: 1em;
+            }
+            .course-main-image, .counsellor-main-image {
+                max-width: 100%;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
         }
     </style>
@@ -402,8 +443,8 @@
             <section id="counsellors" class="section">
                 <h2 class="section-title">Our Counsellors</h2>
                 <img src="sma-image-4.png" alt="Our Counsellors" class="image-hover-effect counsellor-main-image">
-                <div style="text-align: center; font-size: 1.5em; color: var(--color-dark);">
-                    <p>TBA</p>
+                <div style="text-align: center; font-size: 1em; color: var(--color-dark);">
+                    <p>TBA　今後、登録カウンセラー情報をこちらで随時更新します</p>
                 </div>
             </section>
         </div>
